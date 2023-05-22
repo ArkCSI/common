@@ -11,7 +11,7 @@ Lista de comandos comunes inspirado en el post common de **S1ren** y modificado 
 
 `sudo apt-get install seclists -y`
 
-`sudo curl -o /bin/common; sudo chmod +x /bin/common`
+`sudo curl https://raw.githubusercontent.com/ArkCSI/common/main/common -o /bin/common; sudo chmod +x /bin/common`
 
 ### Uso:
 
