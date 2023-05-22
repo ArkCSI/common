@@ -4,8 +4,8 @@ Lista de comandos comunes inspirado en el post common de **S1ren** y modificado 
 
 ### Dependencias:
 
-**SecLists**
-**git**
+1. **git**
+2. **SecLists**
 
 ### Installación:
 
