@@ -1,0 +1,38 @@
+echo"""
+TTP: T1136 - Create Account
+Comandos:
+Para usuario normal: sudo useradd -m <username>; sudo passwd <username>
+Para root: sudo passwd y sudo usermod -aG sudo <username>.
+Claves SSH Autorizadas:
+
+TTP: T1098 - Account Manipulation
+Comandos: ssh-keygen; Modificar <user-home/.ssh/authorized_keys>.
+Cron Jobs (Tareas Programadas):
+
+TTP: T1168 - Local Job Scheduling
+Comandos: crontab -e; Agregar tarea como */5 * * * * /opt/backdoor.sh.
+Timers de Systemd:
+
+TTP: T1053 - Scheduled Task/Job
+Comandos: Crear .service y .timer en /etc/systemd/system/; systemctl daemon-reload; systemctl enable scheduled_bad.timer; systemctl start scheduled_bad.timer.
+Modificación de Configuración de Shell:
+
+TTP: T1156 - .bash_profile and .bashrc
+Comandos: Modificar ~/.bashrc, ~/.bash_profile, /etc/profile para ejecutar scripts al inicio de sesión.
+Secuestro de Enlazador Dinámico (LD_PRELOAD):
+
+TTP: T1574 - Hijack Execution Flow
+Comandos: Crear y compilar archivo .c con gcc; Ejecutar echo “/tmp/preload.so” >> /etc/ld.so.preload.
+Archivos Binarios SUID:
+
+TTP: T1548 - Abuse Elevation Control Mechanism
+Comandos: chmod +x listRootDir.sh; sudo chown root:root listRootDir.sh; sudo chmod u+s listRootDir.sh.
+Uso de rc.local:
+
+TTP: T1037 - Boot or Logon Initialization Scripts
+Comandos: Editar /etc/rc.local para agregar comandos o scripts; sudo chmod +x /etc/rc.local.
+Servicios de Systemd:
+
+TTP: T1053 - Scheduled Task/Job
+Comandos: Crear y habilitar un servicio personalizado en systemd con sudo systemctl daemon-reload; sudo systemctl enable my_custom_service.service; sudo systemctl start my_custom_service.service.
+"""
